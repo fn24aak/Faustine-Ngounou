@@ -20,4 +20,12 @@ public class Complex {
         this.imaginary=0;
     }
     
+    public double getRealPart(){
+        return real;
+    }
+    
+    public double getImaginaryPart(){
+        return imaginary;
+    }
+    
 }
