@@ -11,9 +11,10 @@ package com.mycompany.git_proj_1;
 public class Complex {
     private double real;
     private double imaginary;
+    private double i = Math.sqrt(-1);
     public Complex(double real,double imaginary){
         this.real=real;
-        this.imaginary=imaginary * Math.sqrt(-1);
+        this.imaginary=imaginary;
     }
     public Complex(double real){
         this.real=real;
@@ -26,6 +27,17 @@ public class Complex {
     
     public double getImaginaryPart(){
         return imaginary;
+    }
+    public double get_i(){
+        return i;
+    }
+    
+    public Complex add(Complex other){
+        double num1= (real+other.getRealPart());
+        double num2 = (imaginary+other.getImaginaryPart());
+        Complex result = new Complex(num1,num2);
+        return result;
+        
     }
     
 }
