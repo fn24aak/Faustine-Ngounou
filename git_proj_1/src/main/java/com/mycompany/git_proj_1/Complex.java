@@ -12,6 +12,7 @@ public class Complex {
     private double real;
     private double imaginary;
     private double i = Math.sqrt(-1);
+    
     public Complex(double real,double imaginary){
         this.real=real;
         this.imaginary=imaginary;
@@ -35,6 +36,20 @@ public class Complex {
         Complex result = new Complex(num1,num2);
         return result;
         
+    }
+    
+    public String toString(){
+        String details = "";
+        if (getImaginaryPart()==0) {
+            details += getRealPart();
+        }
+        else if (getRealPart()==0){
+            details += getImaginaryPart() + "i";
+        }
+        else{
+            details += getRealPart() + "+" + getImaginaryPart() + "i";
+        }
+        return details;
     }
     
 }
