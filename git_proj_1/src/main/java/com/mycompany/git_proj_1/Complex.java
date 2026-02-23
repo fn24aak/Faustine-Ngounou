@@ -28,9 +28,6 @@ public class Complex {
     public double getImaginaryPart(){
         return imaginary;
     }
-    public double get_i(){
-        return i;
-    }
     
     public Complex add(Complex other){
         double num1= (real+other.getRealPart());
